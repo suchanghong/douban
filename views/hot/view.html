@@ -1,4 +1,5 @@
-<h1>正在热映</h1>
+<h1>
+{{dataList.title}}</h1>
 <ul class="list-group">
   <li class="list-group-item" ng-repeat="item in dataList.subjects">
     <span class="badge">{{item.rating.average}}</span>
@@ -30,3 +31,12 @@
 	</div>
   </li>
 </ul>
+<p>
+	总共{{dataList.total}}条数据，共{{currentPage}}/{{totalPage}}页
+</p>
+<nav>
+  <ul class="pager">
+    <li class="previous" ng-class="{disabled:currentPage == 1}" ng-click="goPre(currentPage-1)"><a >&larr; 上一页</a></li>
+    <li class="next" ng-class="{disabled:currentPage == totalPage}" ng-click="goNext(currentPage+1)"><a>下一页 &rarr;</a></li>
+  </ul>
+</nav>
