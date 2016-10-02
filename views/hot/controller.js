@@ -1,16 +1,14 @@
 /*
- * @Author: 虚竹
- * @Date:   2016-09-29 09:29:36
- * @Last Modified by:   虚竹
- * @Last Modified time: 2016-09-29 11:22:16
- */
-
-;
+* @Author: 虚竹
+* @Date:   2016-09-29 12:37:03
+* @Last Modified by:   虚竹
+* @Last Modified time: 2016-10-02 10:32:13
+*/
 (function(angular) {
-    'use strict';
-    var app = angular.module("renren");
-    app.controller('hotController', ['$scope', function($scope) {
-        $scope.dataList = {
+	'use strict';
+	var app = angular.module("renren");
+	app.controller('hotController', ['$scope', function($scope){
+		$scope.dataList = {
             "count": 20,
             "start": 0,
             "total": 31,
@@ -1253,5 +1251,5 @@
             }],
             "title": "正在上映的电影-北京"
         }
-    }]);
+	}]);
 })(angular);
